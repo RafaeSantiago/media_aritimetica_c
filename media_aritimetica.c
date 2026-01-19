@@ -4,14 +4,22 @@ int main()
 {
     double p1, p2, p3, p4, media;
 
-    printf("Digite a nota da P1: ");
-    scanf("%lf", &p1);
-    printf("Digite a nota da P2: ");
-    scanf("%lf", &p2);
-    printf("Digite a nota da P3: ");
-    scanf("%lf", &p3);
-    printf("Digite a nota da P4: ");
-    scanf("%lf", &p4);
+    do
+    {
+        printf("Digite a nota da P1: ");
+        scanf("%lf", &p1);
+        printf("Digite a nota da P2: ");
+        scanf("%lf", &p2);
+        printf("Digite a nota da P3: ");
+        scanf("%lf", &p3);
+        printf("Digite a nota da P4: ");
+        scanf("%lf", &p4);
+
+        if (p1 < 0 || p1 > 10 || p2 < 0 || p2 > 10 || p3 < 0 || p3 > 10 || p4 < 0 || p4 > 10)
+        {
+            printf("\nErro: As notas devem estar entre 0 e 10.\n\n");
+        }
+    } while (p1 < 0 || p1 > 10 || p2 < 0 || p2 > 10 || p3 < 0 || p3 > 10 || p4 < 0 || p4 > 10);
 
     media = (p1 + p2 + p3 + p4) / 4;
 
